@@ -11,3 +11,23 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+.marker_icon {
+  color: red;
+  font-size: 40px;
+  border: 2px solid black;
+}
+
+.event_icon {
+  font-size: 40px;
+}
+
+.box {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
