@@ -1,5 +1,5 @@
 import React from "react"
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
 import BoxInfo from "./BoxInfo"
 
@@ -7,17 +7,18 @@ function Map({ apiData }) {
   const [markerIcon, setMarkerIcon] = useState(null)
   const [earthquakeInfo, setEarthquakeInfo] = useState(null)
 
-  const center = {
-    lat: 37.98381,
-    lng: 23.727539,
-  }
+  const center = useMemo(
+    () => ({
+      lat: 37.98381,
+      lng: 23.727539,
+    }),
+    []
+  )
 
   const style = {
     width: "100%",
     height: "100vh",
   }
-
-  console.log(apiData)
 
   const locations = apiData.map((el, i) => {
     const lat = el.geometry.coordinates[1]
@@ -28,13 +29,17 @@ function Map({ apiData }) {
         key={i}
         position={{ lat, lng }}
         icon={markerIcon}
-        onClick={() =>
+        onClick={(e) => {
+          e.preventDefault?.()
           setEarthquakeInfo({
             id: el.id,
             location: el.properties.place,
             magnitude: el.properties.mag,
+            magUnit: el.properties.magType,
+            depth: el.geometry.coordinates[2],
+            time: el.properties.time,
           })
-        }
+        }}
       />
     )
   })
