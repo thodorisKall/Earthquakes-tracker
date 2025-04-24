@@ -9,8 +9,8 @@ function Map({ apiData }) {
 
   const center = useMemo(
     () => ({
-      lat: 37.98381,
-      lng: 23.727539,
+      lat: 35.806677,
+      lng: -34.181531,
     }),
     []
   )
@@ -46,7 +46,7 @@ function Map({ apiData }) {
 
   const handleMapLoad = () => {
     setMarkerIcon({
-      url: "https://i.imgur.com/9FG8kno.png",
+      url: "https://i.imgur.com/Wpz4GPF.png",
       scaledSize: new window.google.maps.Size(40, 40),
     })
   }
@@ -56,7 +56,7 @@ function Map({ apiData }) {
       <GoogleMap
         mapContainerStyle={style}
         center={center}
-        zoom={8}
+        zoom={4}
         onLoad={handleMapLoad}
       >
         {locations}
