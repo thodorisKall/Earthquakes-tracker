@@ -8,7 +8,9 @@ body {
 
 :root {
   --red: #b42600;
-  --grey: #999999;
+  --grey: #e5e4e2;
+  --dark-grey: #a9a9a9;
+  --secondary-grey: #808080;
   --white: #fff;
 }
 
@@ -22,13 +24,34 @@ body {
 }
 
 .box {
+  background-color: var(--grey);
   position: absolute;
   bottom: 30px;
   left: 30px;
-  background: white;
-  padding: 20px;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box_title {
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  background-color: var(--red);
+  color: var(--white);
+  border: 1px solid transparent;
+}
+
+.box_data {
+  padding: 0px 20px 20px;
+}
+
+.box h3 {
+  color: var(--dark-grey);
+  border-bottom: 1px solid var(--dark-grey);
+}
+
+.box span {
+  font-size: 1.5rem;
+  color: var(--secondary-grey);
 }
 
 #magUnit {
