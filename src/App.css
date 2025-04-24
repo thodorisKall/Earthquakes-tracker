@@ -49,11 +49,67 @@ body {
   border-bottom: 1px solid var(--dark-grey);
 }
 
-.box span {
+.box_data span:not(.label) {
   font-size: 1.5rem;
   color: var(--secondary-grey);
 }
 
 #magUnit {
   text-transform: capitalize;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .box {
+    width: 95vw;
+    padding: 0px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .box_title,
+  #box_depth,
+  .label,
+  #magUnit {
+    display: none;
+  }
+
+  .box_data {
+    display: flex;
+    padding: 0px 10px;
+  }
+  .box_info {
+    display: flex;
+  }
+
+  .box h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-grey);
+    border-bottom: transparent;
+  }
+
+  #box_mag {
+    grid-column: 3 / 4;
+  }
+
+  #magnitude {
+    font-size: 50px;
+  }
+
+  #box_time {
+    grid-column: 2 / 3;
+    grid-row: 1/2;
+    display: flex;
+    flex-wrap: wrap;
+    width: 130px;
+  }
+
+  #box_time span {
+    color: var(--dark-grey);
+    font-size: 15px;
+    text-transform: capitalize;
+  }
 }
