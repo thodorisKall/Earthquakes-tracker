@@ -12,21 +12,23 @@ function BoxInfo({ info }) {
       </div>
       <div className='box_data'>
         <h3>
-          Location: <span>{info.location}</span>
+          <span className='label'>Location:</span> <span>{info.location}</span>
         </h3>
-        <h3>
-          Magnitude: <span>{info.magnitude}</span>
-          <span id='magUnit'>{info.magUnit}</span>
-        </h3>
-        <h3>
-          Depth: <span>{info.depth} km</span>
-        </h3>
-        <h3>
-          Time:
-          <span>
-            {timePart} at {datePart}
-          </span>
-        </h3>
+        <div className='box_info'>
+          <h3 id='box_mag'>
+            <span className='label'>Magnitude:</span>
+            <span id='magnitude'>{info.magnitude}</span>
+            <span id='magUnit'>{info.magUnit}</span>
+          </h3>
+          <h3 id='box_depth'>
+            <span className='label'>Depth:</span> <span>{info.depth} km</span>
+          </h3>
+          <h3 id='box_time'>
+            <span className='label'>Time:</span>
+            <span> {timePart} </span> <span className='label'>at</span>
+            <span> {datePart}</span>
+          </h3>
+        </div>
       </div>
     </div>
   )
