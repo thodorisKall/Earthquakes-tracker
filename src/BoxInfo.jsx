@@ -7,15 +7,27 @@ function BoxInfo({ info }) {
   const timePart = timestamp.toLocaleTimeString()
   return (
     <div className='box'>
-      <h2>Earthquake </h2>
-      <h3>Location:{info.location} </h3>
-      <h3>
-        Magnitude:{info.magnitude} <span id='magUnit'>{info.magUnit}</span>
-      </h3>
-      <h3>Depth: {info.depth} km</h3>
-      <h3>
-        Time: {timePart} at {datePart}
-      </h3>
+      <div className='box_title'>
+        <h2>Earthquake </h2>
+      </div>
+      <div className='box_data'>
+        <h3>
+          Location: <span>{info.location}</span>
+        </h3>
+        <h3>
+          Magnitude: <span>{info.magnitude}</span>
+          <span id='magUnit'>{info.magUnit}</span>
+        </h3>
+        <h3>
+          Depth: <span>{info.depth} km</span>
+        </h3>
+        <h3>
+          Time:
+          <span>
+            {timePart} at {datePart}
+          </span>
+        </h3>
+      </div>
     </div>
   )
 }
