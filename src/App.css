@@ -6,16 +6,15 @@ body {
   height: 100vh;
 }
 
-.map {
-  border: 2px solid black;
-  width: 100vw;
-  height: 100vh;
+:root {
+  --red: #b42600;
+  --grey: #999999;
+  --white: #fff;
 }
 
-.marker_icon {
-  color: red;
-  font-size: 40px;
-  border: 2px solid black;
+.map {
+  width: 100vw;
+  height: 100vh;
 }
 
 .event_icon {
@@ -28,6 +27,10 @@ body {
   left: 30px;
   background: white;
   padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#magUnit {
+  text-transform: capitalize;
 }
