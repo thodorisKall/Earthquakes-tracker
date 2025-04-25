@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
+  font-family: "Merriweather", serif;
+  font-family: "Inter", sans-serif;
 }
 
 :root {
@@ -36,6 +40,7 @@ body {
 }
 
 .box_title {
+  font-family: "Merriweather", serif;
   border-radius: 8px 8px 0 0;
   text-align: center;
   background-color: var(--red);
@@ -52,7 +57,12 @@ body {
   border-bottom: 1px solid var(--dark-grey);
 }
 
+.label {
+  font-family: "Merriweather", serif;
+}
+
 .box_data span:not(.label) {
+  font-family: "Inter", sans-serif;
   font-size: 1.5rem;
   color: var(--secondary-grey);
 }

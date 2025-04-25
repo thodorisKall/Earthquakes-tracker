@@ -35,11 +35,11 @@ function BoxInfo({ info }) {
         </h3>
         <div className='box_info'>
           <h3 id='box_mag'>
-            <span className='label'>Magnitude:</span>
+            <span className='label'>Magnitude: </span>
             <span id='magnitude' className={getMagnitudeClass(info.magnitude)}>
               {cutToOneDecimal(info.magnitude).toFixed(1)}
             </span>
-            <span id='magUnit'>{info.magUnit}</span>
+            <span id='magUnit'> {info.magUnit}</span>
           </h3>
           <h3 id='box_depth'>
             <span className='label'>Depth:</span> <span>{info.depth} km</span>
