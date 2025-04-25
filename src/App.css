@@ -12,6 +12,9 @@ body {
   --dark-grey: #a9a9a9;
   --secondary-grey: #808080;
   --white: #fff;
+  --green: #008000;
+  --red: #ff0000;
+  --orange: #ff8c00;
 }
 
 .map {
@@ -58,6 +61,18 @@ body {
   text-transform: capitalize;
 }
 
+.low-mag {
+  color: var(--green) !important;
+}
+
+.medium-mag {
+  color: var(--orange) !important;
+}
+
+.high-mag {
+  color: var(--red) !important;
+}
+
 /* Media Queries */
 @media (max-width: 600px) {
   .box {
@@ -77,6 +92,7 @@ body {
 
   .box_data {
     display: flex;
+    justify-content: space-between;
     padding: 0px 10px;
   }
   .box_info {
