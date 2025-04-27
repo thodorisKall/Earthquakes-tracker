@@ -3,6 +3,7 @@
 ## 🌍 Goal of the Project
 
 The goal of the Earthquakes Tracker project is to combine React skills with Google Maps integration, allowing real-time visualization of global earthquake data. It displays earthquake events (magnitude greater than 2) from around the world over the last two days.
+![Στιγμιότυπο οθόνης (709)](https://github.com/user-attachments/assets/fec53f7c-9d35-4f97-a3f4-c52a2c88a456)
 
 ## 🚀 Live Site
 
