@@ -2,6 +2,7 @@ import "./App.css"
 import { useEffect, useState } from "react"
 import Map from "./Map"
 import axios from "axios"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [earthQuakesData, setEarthQuakesData] = useState(null)
@@ -33,6 +34,7 @@ function App() {
   return (
     <div className='App'>
       {!isLoading ? <Map apiData={earthQuakesData} /> : "Loading..."}
+      <Analytics />
     </div>
   )
 }
