@@ -30,6 +30,17 @@ body {
   font-size: 40px;
 }
 
+/*Banner  */
+.banner {
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  color: white;
+  background-color: var(--red);
+  text-align: center;
+}
+
+/* BoxInfo */
 .box {
   background-color: var(--grey);
   position: absolute;

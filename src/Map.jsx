@@ -2,6 +2,7 @@ import React from "react"
 import { useState, useMemo } from "react"
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
 import BoxInfo from "./BoxInfo"
+import Banner from "./Banner"
 
 function Map({ apiData }) {
   const [markerIcon, setMarkerIcon] = useState(null)
@@ -61,6 +62,7 @@ function Map({ apiData }) {
       >
         {locations}
         {earthquakeInfo && <BoxInfo info={earthquakeInfo} />}
+        <Banner />
       </GoogleMap>
     </LoadScript>
   )
