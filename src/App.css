@@ -35,9 +35,25 @@ body {
   position: absolute;
   top: 0px;
   width: 100vw;
-  color: white;
+  color: var(--grey);
   background-color: var(--red);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.banner-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--grey);
+}
+
+.banner-btn:hover {
+  cursor: pointer;
+  color: var(--white);
+  /* font-size: larger; */
 }
 
 /* BoxInfo */
