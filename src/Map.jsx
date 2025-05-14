@@ -7,6 +7,7 @@ import Banner from "./Banner"
 function Map({ apiData }) {
   const [markerIcon, setMarkerIcon] = useState(null)
   const [earthquakeInfo, setEarthquakeInfo] = useState(null)
+  const [showBanner, setShowBanner] = useState(true)
 
   const center = useMemo(
     () => ({
@@ -62,7 +63,7 @@ function Map({ apiData }) {
       >
         {locations}
         {earthquakeInfo && <BoxInfo info={earthquakeInfo} />}
-        <Banner />
+        {showBanner && <Banner onCloseBanner={() => setShowBanner(false)} />}
       </GoogleMap>
     </LoadScript>
   )
