@@ -96,6 +96,12 @@ body {
 
 /* Media Queries */
 @media (max-width: 600px) {
+  /* Banner */
+  .banner h2 {
+    font-size: 18px;
+  }
+
+  /* BoxInfo */
   .box {
     width: 95vw;
     padding: 0px;
